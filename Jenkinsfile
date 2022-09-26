@@ -3,7 +3,7 @@ node {
     git 'https://github.com/shazforiot/GOL.git'
   }
   stage('SonarQube analysis') {
-    def scannerHome = tool 'sonarqube';
+    def scannerHome = tool 'sq1';
     withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
       -D sonar.login=admin \
